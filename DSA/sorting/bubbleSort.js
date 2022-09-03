@@ -14,17 +14,23 @@
 // };
 
 const bubbleSort = function(arr) {
+  let noSwap;
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length - 1 - i; j++) {
-      // console.log(arr[j],arr[j + 1]);
+    noSwap = true;
+    for (let j = 0; j < arr.length  - i - 1; j++) {
       if (arr[j + 1] < arr[j]) {
         let temp = arr[j + 1];
         arr[j + 1] = arr[j];
         arr[j] = temp;
+        noSwap = false;
       }
       console.log(arr);
+    
+    }
+    if (noSwap) {
+      break;
     }
   }
   return arr;
 };
-console.log(bubbleSort([103, 5,5, 80, 3, 8]));
+console.log(bubbleSort([2,6,78,148,394]));
