@@ -9,6 +9,12 @@ console.log(reverseString("Hi my name is Charu !!"));
 
 
 const reverse = function(str) {
+  // if length of string is 1
+  // if string is empty or some other argument is passed display some message
+  if (str.length < 2 || !str || typeof (str) !== "string") {
+    console.log("Pass a valid string");
+  }
+
   let reversedStr = "";
   for (let i = str.length - 1; i >= 0; i--) {
     reversedStr += str[i];
